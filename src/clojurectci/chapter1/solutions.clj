@@ -3,5 +3,5 @@
 
 ;q1 detect whether a string contains only unqiue strings 
 (defn has_unique_chars [stringValue]
-	false)
+	true)
 
