@@ -11,4 +11,8 @@
     (is (= true (has_unique_chars "ab")))
     (is (= true (has_unique_chars "AB")))
     (is (= false (has_unique_chars "aa")))
+    (is (= true (has_unique_chars  "")))
+    (is (= false (has_unique_chars "aba")))
+    (is (= false (has_unique_chars "caca")))
+    (is (= false (has_unique_chars "cabad")))
     ))
