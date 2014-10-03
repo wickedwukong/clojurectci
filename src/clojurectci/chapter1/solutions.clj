@@ -20,7 +20,7 @@
 
 ;q1 detect whether a string contains only unique strings 
 (defn has_unique_chars [str_value]
-	(trampoline (has_unique_chars_a str_value #{})))
+	(trampoline #(has_unique_chars_a str_value #{})))
 
 
 
