@@ -1,4 +1,4 @@
-(ns clojurectci.chapter1.solutions
+(ns clojurectci.chapter1.q1.unique-chars-solution
   (:gen-class))
 
 (declare has_unique_chars_a has_unique_chars_b)

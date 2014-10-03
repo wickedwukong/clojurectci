@@ -1,6 +1,6 @@
-(ns clojurectci.chapter1.solutions-test
+(ns clojurectci.chapter1.q1.unique-chars-solution-test
   (:require [clojure.test :refer :all]
-            [clojurectci.chapter1.solutions :refer :all]))
+            [clojurectci.chapter1.q1.unique-chars-solution :refer :all]))
 
 ;q1 tests
 (deftest test_has_unique_chars
