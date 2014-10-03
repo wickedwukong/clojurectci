@@ -14,4 +14,5 @@
     (is (= false (has_unique_chars "aba")))
     (is (= false (has_unique_chars "caca")))
     (is (= false (has_unique_chars "cabad")))
+    (is (= false (has_unique_chars nil)))
     ))
