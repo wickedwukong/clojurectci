@@ -2,7 +2,6 @@
   (:require [clojure.test :refer :all]
             [clojurectci.chapter1.q1.unique-chars-solution :refer :all]))
 
-;q1 tests
 (deftest test_has_unique_chars
   (testing "test if a string has has unique chars"
     (is (= true (has_unique_chars "a")))

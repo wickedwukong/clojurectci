@@ -3,15 +3,17 @@
 
 (declare has_unique_chars_a has_unique_chars_b)
 
+(defn is_empty [str_value] (= 0 (count str_value)))
+
 (defn has_unique_chars_a [str_value unique_char_set] 
-	(if (= 0 (count str_value)) 
+	(if (is_empty str_value) 
 		true
 		(if (contains? unique_char_set (.charAt str_value 0))
 			false
 			#(has_unique_chars_b (subs str_value 1) (conj unique_char_set (.charAt str_value 0))))))
 
 (defn has_unique_chars_b [str_value unique_char_set] 
-	(if (= 0 (count str_value)) 
+	(if (is_empty str_value)
 		true 
 		(if (contains? unique_char_set (.charAt str_value 0))
 			false 
