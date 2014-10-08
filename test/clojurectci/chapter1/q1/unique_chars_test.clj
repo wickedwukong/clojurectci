@@ -1,6 +1,6 @@
-(ns clojurectci.chapter1.q1.unique-chars-solution-test
+(ns clojurectci.chapter1.q1.unique-chars-test
   (:require [clojure.test :refer :all]
-            [clojurectci.chapter1.q1.unique-chars-solution :refer :all]))
+            [clojurectci.chapter1.q1.unique-chars :refer :all]))
 
 (deftest test_has_unique_chars
   (testing "test if a string has has unique chars"
