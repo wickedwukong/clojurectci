@@ -4,7 +4,8 @@
 (defn append [compressed-string, current-char-count]	
 	(let [current-char (nth current-char-count 0)
 		  current-count (nth current-char-count 1)]
- 		 (do (.append compressed-string current-char)
+ 		 (do 
+  		 	 (.append compressed-string current-char)
 			 (if (> current-count 1) (.append compressed-string current-count))
 			 compressed-string
 	)))
@@ -26,8 +27,8 @@
 	(if (== (.length value) 0)
 		value
 		(let [compressed (do-it (StringBuffer. "") [(.charAt value 0) 1] (.substring value 1))]
-			(if (>= (.length compressed) (.length value))
-					value
-					compressed
-				))
+			(if (> (.length compressed) (.length value))
+				value
+				compressed
+			))
 		))
