@@ -2,13 +2,9 @@
   (:gen-class))
 
 (defn append [compressed-string, current-char-count]	
-	(let [current-char (nth current-char-count 0)
-		  current-count (nth current-char-count 1)]
- 		 (do 
-  		 	 (.append compressed-string current-char)
-			 (if (> current-count 1) (.append compressed-string current-count))
-			 compressed-string
-	)))
+	(do (.append compressed-string (clojure.string/join current-char-count))
+		 compressed-string
+	))
 
 (defn do-it [compressed-string, current-char-count, remaining-string]
 	(if (== (.length remaining-string) 0)
@@ -22,6 +18,7 @@
 					(recur compressed-string [next-char 1] (.substring remaining-string 1)))
 				(recur compressed-string [current-char (+ current-count 1)] (.substring remaining-string 1))
 			))))
+
 
 (defn compress [value] 
 	(if (== (.length value) 0)
