@@ -10,4 +10,5 @@
   	(is (= "aa" (compress "aa")))
   	(is (= "a3" (compress "aaa")))
   	(is (= "a3b" (compress "aaab")))
+  	(is (= "a3b2c" (compress "aaabbc")))
 ))
