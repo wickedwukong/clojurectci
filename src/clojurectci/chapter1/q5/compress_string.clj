@@ -23,6 +23,7 @@
 				(recur compressed-string [current-char (+ current-count 1)] (.substring remaining-string 1))
 			))))
 
+
 (defn compress [value] 
 	(if (== (.length value) 0)
 		value
