@@ -6,4 +6,8 @@
 (deftest test_compress_string
   (testing "compress string"
   	(is (= "" (compress "")))
+  	(is (= "a" (compress "a")))
+  	(is (= "aa" (compress "aa")))
+  	(is (= "a3" (compress "aaa")))
+  	(is (= "a3b" (compress "aaab")))
 ))
