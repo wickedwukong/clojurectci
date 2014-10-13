@@ -1,5 +1,4 @@
-(ns clojurectci.chapter1.q2.reverse-string
-  (:gen-class))
+(ns clojurectci.chapter1.q2.reverse-string)
 
 (defn reverse-string[value] 
 	(if (= nil value)

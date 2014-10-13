@@ -1,5 +1,4 @@
-(ns clojurectci.chapter1.q1.unique-chars
-  (:gen-class))
+(ns clojurectci.chapter1.q1.unique-chars)
 
 (defn is_empty [str_value] (= 0 (count str_value)))
 

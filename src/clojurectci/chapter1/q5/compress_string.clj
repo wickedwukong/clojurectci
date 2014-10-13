@@ -1,5 +1,4 @@
-(ns clojurectci.chapter1.q5.compress-string
-  (:gen-class))
+(ns clojurectci.chapter1.q5.compress-string)
 
 (defn append-current-compressed-string [compressed-string, current-char-count]	
 	(do (.append compressed-string (clojure.string/join current-char-count))
