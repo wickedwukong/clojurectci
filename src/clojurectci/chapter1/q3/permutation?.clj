@@ -1,4 +1,4 @@
-(ns clojurectci.chapter1.q3.is-permutation)
+(ns clojurectci.chapter1.q3.permutation?)
 
 (defn count-char [char-value count-map] 
 	(let [count (get count-map char-value)]

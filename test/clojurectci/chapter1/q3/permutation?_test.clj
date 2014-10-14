@@ -1,6 +1,6 @@
-(ns clojurectci.chapter1.q3.is-permutation-test
+(ns clojurectci.chapter1.q3.permutation?-test
   (:require [clojure.test :refer :all]
-            [clojurectci.chapter1.q3.is-permutation :refer :all]))
+            [clojurectci.chapter1.q3.permutation? :refer :all]))
 
 (deftest test_one_string_is_a_permutation_of_the_other
   (testing "if one string is a permutation of the other"
