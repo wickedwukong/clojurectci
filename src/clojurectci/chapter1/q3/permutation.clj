@@ -9,9 +9,9 @@
 	))
 
 (defn build-count-map [str-value count-map] 
-	(if (= (.length str-value) 0)
-		count-map
+	(if (seq str-value)
 		(recur (.substring str-value 1) (count-char (.charAt str-value 0) count-map))
+		count-map
 		))
 
 (defn unique-char-count-map [str-value] 
