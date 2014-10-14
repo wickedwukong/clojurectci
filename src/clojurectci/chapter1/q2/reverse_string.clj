@@ -19,7 +19,7 @@
 
 
 (defn reverse-string-using-dotdot-macro[value] 
-	(if (= nil value)
+	(if (nil? value)
 	nil
 	(.. (StringBuilder. value) reverse toString)))
 
