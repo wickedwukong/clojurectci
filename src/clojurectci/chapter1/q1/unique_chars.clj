@@ -11,7 +11,7 @@
 
 
 ;q1 detect whether a string contains only unique strings 
-(defn has_unique_chars [str_value]
+(defn has_unique_chars? [str_value]
 	(if (= nil str_value)
 		false
 		(trampoline #(detect_duplicate_chars_recursively str_value #{}))))
