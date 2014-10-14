@@ -2,7 +2,7 @@
 
 (defn count-char [char-value count-map] 
 	(let [count (get count-map char-value)]
-		(if (= count nil)
+		(if (nil? count)
 			(assoc count-map char-value 1)
 			(assoc count-map char-value (+ count 1))
 			)
