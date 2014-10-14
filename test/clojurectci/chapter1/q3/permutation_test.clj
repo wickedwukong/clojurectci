@@ -20,4 +20,5 @@
     (is (= false (permutation? "A" "a")))
     (is (= false (permutation? "Ab" "ab")))
     (is (= false (permutation? nil nil)))
+    (is (= false (permutation? nil "")))
     ))
