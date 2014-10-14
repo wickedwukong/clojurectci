@@ -19,8 +19,8 @@
 	)
 
 (defn permutation? [str-value1 str-value2]
-	(if (or (= str-value1 nil)
-			(= str-value2 nil)
+	(if (or (nil? str-value1)
+			(nil? str-value2)
 			(not= (.length str-value1) (.length str-value2)))
 		false
 		(if (= (unique-char-count-map str-value1) (unique-char-count-map str-value2))
