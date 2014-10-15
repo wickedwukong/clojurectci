@@ -10,7 +10,7 @@
 
 (defn build-count-map [str-value count-map] 
 	(if (seq str-value)
-		(recur (.substring str-value 1) (count-char (.charAt str-value 0) count-map))
+		(recur (rest str-value) (count-char (first str-value) count-map))
 		count-map
 		))
 
