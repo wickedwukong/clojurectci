@@ -3,6 +3,11 @@
             [clojurectci.chapter1.q8.rotation :refer :all]))
 
 (deftest test_rotation?
-  (testing "compress string"
+  (testing "if a string is a rotation of another string"
   	(is (= true (rotation? "a" "a")))
+  	(is (= false (rotation? "a" "b")))
+  	(is (= true (rotation? "ab" "ba")))
+  	(is (= true (rotation? "abc" "bca")))
+  	(is (= true (rotation? "abc" "cab")))
+  	(is (= false (rotation? "" "")))
 ))
