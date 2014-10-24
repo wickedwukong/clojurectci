@@ -6,4 +6,5 @@
   (testing "generating n pair of properly closed parentheses"
   	(is (= #{} (pair_of_parentheses 0)))
   	(is (= #{"()"} (pair_of_parentheses 1)))
+  	(is (= #{"(())", "()()"} (pair_of_parentheses 2)))
  )) 
