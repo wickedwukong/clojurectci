@@ -13,7 +13,7 @@
 			        (union #{} (find_all_properly_closed_parentheses (str current_parentheses "(") (- remaining_left_parens_count 1) remaining_right_parens_count))
 		      (can_insert_right_paren remaining_left_parens_count remaining_right_parens_count)
 			        (union #{} (find_all_properly_closed_parentheses (str current_parentheses ")") remaining_left_parens_count (- remaining_right_parens_count 1)))
-			        :else #{})
+			        :else (conj #{} current_parentheses))
 			)	
 
 
