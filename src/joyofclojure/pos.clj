@@ -14,6 +14,7 @@
 		:else (recur e (rest indexed-pairs))))
 
 (defn pos [e coll]
-	(if (map? coll)
-		(find-key-or-index e (vec coll))
-		(find-key-or-index e (map-indexed vector coll))))
+	(cond 
+		(map? coll) (find-key-or-index e (seq coll))
+		(set? coll) (find-key-or-index e (map vector coll coll))
+		:else (find-key-or-index e (map-indexed vector coll))))
