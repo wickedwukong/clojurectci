@@ -1,12 +1,5 @@
 (ns joyofclojure.pos)
 
-; (defn pos ([e coll] (pos -1 e coll))
-	; ([index e coll] 
-		; (cond 
-			; (empty? coll) nil
-		    ; (= e (first coll)) (+ index 1)
-			; :else (recur (+ index 1) e (rest coll)))))
-
 (defn find-key-or-index [e indexed-pairs]
 	(cond 
 		(empty? indexed-pairs) nil
@@ -18,3 +11,13 @@
 		(map? coll) (find-key-or-index e (seq coll))
 		(set? coll) (find-key-or-index e (map vector coll coll))
 		:else (find-key-or-index e (map-indexed vector coll))))
+
+
+(defn index [coll]
+	(cond 
+		(map? coll) (seq coll)
+		(set? coll) (map vector coll coll)
+		:else (map-indexed vector coll)))
+
+(defn pos2 [e coll]
+	(for [[i element] (index coll) :when (= e element)] i))
